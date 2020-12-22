@@ -7,6 +7,8 @@
         <span v-on:mousemove.stop>PARAR AQUI!!!</span>
     </p>
     <a v-on:click.prevent href="http://google.com">Google</a>
+    <br>
+    <input type="text" v-on:keyup.enter.alt="exibirAlerta">
 </div>
 
 <script>
@@ -24,7 +26,10 @@
             atualizarXY(event) {
                 this.x = event.clientX
                 this.y = event.clientY
-            }   
+            },
+            exibirAlerta() {
+                alert('Alertou!!!')
+            } 
         }
     })
 </script>
